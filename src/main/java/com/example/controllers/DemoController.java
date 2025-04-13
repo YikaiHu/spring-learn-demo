@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 @Controller
 public class DemoController {
 
@@ -11,5 +12,10 @@ public class DemoController {
   @ResponseBody
   public String index() {
     return "Your first return";
+  }
+
+  @RequestMapping(value = "/home.html", method = RequestMethod.GET)
+  public String home() {
+    return "home.html";
   }
 }
